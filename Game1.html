@@ -1,0 +1,1434 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Counting Game</title>
+        <style>
+            * {padding: 0px; margin: 70px 20px 0px 20px;}
+            canvas {background: #eee; display: block; margin: 0 auto;}
+        </style>
+        <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+        <link href="https://fonts.googleapis.com/css2?family=Merienda+One&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        
+        <canvas id="myCanvas" width="864" height="576"></canvas>
+        <script>
+            var canvas = document.getElementById("myCanvas");
+            var ctx = canvas.getContext("2d");
+            
+            var x = (canvas.width / 2) * Math.random();
+            var y = (canvas.height / 2) * Math.random();
+            var x1 = (canvas.width / 2) * Math.random();
+            var y1 = (canvas.height / 2) * Math.random();
+            var x2 = (canvas.width / 2) * Math.random();
+            var y2 = (canvas.height / 2) * Math.random();
+            var x3 = (canvas.width / 2) * Math.random();
+            var y3 = (canvas.height / 2) * Math.random();
+            var x4 = (canvas.width / 2) * Math.random();
+            var y4 = (canvas.height / 2) * Math.random();
+            var x5 = (canvas.width / 2) * Math.random();
+            var y5 = (canvas.height / 2) * Math.random();
+            var x6 = (canvas.width / 2) * Math.random();
+            var y6 = (canvas.height / 2) * Math.random();
+            var x7 = (canvas.width / 2) * Math.random();
+            var y7 = (canvas.height / 2) * Math.random();
+            var x8 = (canvas.width / 2) * Math.random();
+            var y8 = (canvas.height / 2) * Math.random();
+            var x9 = (canvas.width / 2) * Math.random();
+            var y9 = (canvas.height / 2) * Math.random();
+            var x10 = (canvas.width / 2) * Math.random();
+            var y10 = (canvas.height / 2) * Math.random();
+            var x11 = (canvas.width / 2) * Math.random();
+            var y11 = (canvas.height / 2) * Math.random();
+            var x12 = (canvas.width / 2) * Math.random();
+            var y12 = (canvas.height / 2) * Math.random();
+            var x13 = (canvas.width / 2) * Math.random();
+            var y13 = (canvas.height / 2) * Math.random();
+            var x14 = (canvas.width / 2) * Math.random();
+            var y14 = (canvas.height / 2) * Math.random();
+            var x15 = (canvas.width / 2) * Math.random();
+            var y15 = (canvas.height / 2) * Math.random();
+            var x16 = (canvas.width / 2) * Math.random();
+            var y16 = (canvas.height / 2) * Math.random();
+            var x17 = (canvas.width / 2) * Math.random();
+            var y17 = (canvas.height / 2) * Math.random();
+            var x18 = (canvas.width / 2) * Math.random();
+            var y18 = (canvas.height / 2) * Math.random();
+            var x19 = (canvas.width / 2) * Math.random();
+            var y19 = (canvas.height / 2) * Math.random();
+            var x20 = (canvas.width / 2) * Math.random();
+            var y20 = (canvas.height / 2) * Math.random();
+            var x21 = (canvas.width / 2) * Math.random();
+            var y21 = (canvas.height / 2) * Math.random();
+            var x22 = (canvas.width / 2) * Math.random();
+            var y22 = (canvas.height / 2) * Math.random();
+            var x23 = (canvas.width / 2) * Math.random();
+            var y23 = (canvas.height / 2) * Math.random();
+            var x24 = (canvas.width / 2) * Math.random();
+            var y24 = (canvas.height / 2) * Math.random();
+            var x25 = (canvas.width / 2) * Math.random();
+            var y25 = (canvas.height / 2) * Math.random();
+            var x26 = (canvas.width / 2) * Math.random();
+            var y26 = (canvas.height / 2) * Math.random();
+            var x27 = (canvas.width / 2) * Math.random();
+            var y27 = (canvas.height / 2) * Math.random();
+            var x28 = (canvas.width / 2) * Math.random();
+            var y28 = (canvas.height / 2) * Math.random();
+            var x29 = (canvas.width / 2) * Math.random();
+            var y29 = (canvas.height / 2) * Math.random();
+            
+            
+            var dx = 2;
+            var dy = -2;
+            var dx1 = 3;
+            var dy1 = -1;
+            var dx2 = 1;
+            var dy2 = -3;
+            var dx3 = 2;
+            var dy3 = -2;
+            
+            var turtleBodyRadius = 20;
+            var turtleHeadRadius = 10;
+            
+            function drawTurtle() 
+            {
+                ctx.beginPath();
+                ctx.arc(x,y,turtleBodyRadius,0,Math.PI*2);
+                ctx.fillStyle = "#006400";
+                ctx.fill();
+                ctx.closePath();
+                ctx.beginPath();
+                ctx.arc(x + 20,y,turtleHeadRadius,0,Math.PI*2);
+                ctx.fillStyle = "#78AB46";
+                ctx.fill();
+                ctx.closePath();
+            }
+            
+            function drawTurtle1() 
+            {
+                ctx.beginPath();
+                ctx.arc(x1,y1,turtleBodyRadius,0,Math.PI*2);
+                ctx.fillStyle = "#006400";
+                ctx.fill();
+                ctx.closePath();
+                ctx.beginPath();
+                ctx.arc(x1 - 20,y1,turtleHeadRadius,0,Math.PI*2);
+                ctx.fillStyle = "#78AB46";
+                ctx.fill();
+                ctx.closePath();
+            }
+            
+            function drawTurtle2() 
+            {
+                ctx.beginPath();
+                ctx.arc(x2,y2,turtleBodyRadius,0,Math.PI*2);
+                ctx.fillStyle = "#006400";
+                ctx.fill();
+                ctx.closePath();
+                ctx.beginPath();
+                ctx.arc(x2,y2 + 20,turtleHeadRadius,0,Math.PI*2);
+                ctx.fillStyle = "#78AB46";
+                ctx.fill();
+                ctx.closePath();
+            }
+            
+            function drawTurtle3() 
+            {
+                ctx.beginPath();
+                ctx.arc(x3,y3,turtleBodyRadius,0,Math.PI*2);
+                ctx.fillStyle = "#006400";
+                ctx.fill();
+                ctx.closePath();
+                ctx.beginPath();
+                ctx.arc(x3,y3 - 20,turtleHeadRadius,0,Math.PI*2);
+                ctx.fillStyle = "#78AB46";
+                ctx.fill();
+                ctx.closePath();
+            }
+            
+            function drawTurtle4() 
+            {
+                ctx.beginPath();
+                ctx.arc(x4,y4,turtleBodyRadius,0,Math.PI*2);
+                ctx.fillStyle = "#006400";
+                ctx.fill();
+                ctx.closePath();
+                ctx.beginPath();
+                ctx.arc(x4 + 20,y4,turtleHeadRadius,0,Math.PI*2);
+                ctx.fillStyle = "#78AB46";
+                ctx.fill();
+                ctx.closePath();
+            }
+            
+            function drawTurtle5() 
+            {
+                ctx.beginPath();
+                ctx.arc(x5,y5,turtleBodyRadius,0,Math.PI*2);
+                ctx.fillStyle = "#006400";
+                ctx.fill();
+                ctx.closePath();
+                ctx.beginPath();
+                ctx.arc(x5 - 20,y5,turtleHeadRadius,0,Math.PI*2);
+                ctx.fillStyle = "#78AB46";
+                ctx.fill();
+                ctx.closePath();
+            }
+            
+            function drawTurtle6() 
+            {
+                ctx.beginPath();
+                ctx.arc(x6,y6,turtleBodyRadius,0,Math.PI*2);
+                ctx.fillStyle = "#006400";
+                ctx.fill();
+                ctx.closePath();
+                ctx.beginPath();
+                ctx.arc(x6,y6 + 20,turtleHeadRadius,0,Math.PI*2);
+                ctx.fillStyle = "#78AB46";
+                ctx.fill();
+                ctx.closePath();
+            }
+            
+            function drawTurtle7() 
+            {
+                ctx.beginPath();
+                ctx.arc(x7,y7,turtleBodyRadius,0,Math.PI*2);
+                ctx.fillStyle = "#006400";
+                ctx.fill();
+                ctx.closePath();
+                ctx.beginPath();
+                ctx.arc(x7,y7 - 20,turtleHeadRadius,0,Math.PI*2);
+                ctx.fillStyle = "#78AB46";
+                ctx.fill();
+                ctx.closePath();
+            }
+            
+            function drawTurtle8() 
+            {
+                ctx.beginPath();
+                ctx.arc(x8,y8,turtleBodyRadius,0,Math.PI*2);
+                ctx.fillStyle = "#006400";
+                ctx.fill();
+                ctx.closePath();
+                ctx.beginPath();
+                ctx.arc(x8 + 20,y8,turtleHeadRadius,0,Math.PI*2);
+                ctx.fillStyle = "#78AB46";
+                ctx.fill();
+                ctx.closePath();
+            }
+            
+            function drawTurtle9() 
+            {
+                ctx.beginPath();
+                ctx.arc(x9,y9,turtleBodyRadius,0,Math.PI*2);
+                ctx.fillStyle = "#006400";
+                ctx.fill();
+                ctx.closePath();
+                ctx.beginPath();
+                ctx.arc(x9 - 20,y9,turtleHeadRadius,0,Math.PI*2);
+                ctx.fillStyle = "#78AB46";
+                ctx.fill();
+                ctx.closePath();
+            }
+            
+            function drawTurtle10() 
+            {
+                ctx.beginPath();
+                ctx.arc(x10,y10,turtleBodyRadius,0,Math.PI*2);
+                ctx.fillStyle = "#006400";
+                ctx.fill();
+                ctx.closePath();
+                ctx.beginPath();
+                ctx.arc(x10,y10 + 20,turtleHeadRadius,0,Math.PI*2);
+                ctx.fillStyle = "#78AB46";
+                ctx.fill();
+                ctx.closePath();
+            }
+            
+            function drawTurtle11() 
+            {
+                ctx.beginPath();
+                ctx.arc(x11,y11,turtleBodyRadius,0,Math.PI*2);
+                ctx.fillStyle = "#006400";
+                ctx.fill();
+                ctx.closePath();
+                ctx.beginPath();
+                ctx.arc(x11,y11 - 20,turtleHeadRadius,0,Math.PI*2);
+                ctx.fillStyle = "#78AB46";
+                ctx.fill();
+                ctx.closePath();
+            }
+            
+            function drawTurtle12() 
+            {
+                ctx.beginPath();
+                ctx.arc(x12,y12,turtleBodyRadius,0,Math.PI*2);
+                ctx.fillStyle = "#006400";
+                ctx.fill();
+                ctx.closePath();
+                ctx.beginPath();
+                ctx.arc(x12 + 20,y12,turtleHeadRadius,0,Math.PI*2);
+                ctx.fillStyle = "#78AB46";
+                ctx.fill();
+                ctx.closePath();
+            }
+            
+            function drawTurtle13() 
+            {
+                ctx.beginPath();
+                ctx.arc(x13,y13,turtleBodyRadius,0,Math.PI*2);
+                ctx.fillStyle = "#006400";
+                ctx.fill();
+                ctx.closePath();
+                ctx.beginPath();
+                ctx.arc(x13 - 20,y13,turtleHeadRadius,0,Math.PI*2);
+                ctx.fillStyle = "#78AB46";
+                ctx.fill();
+                ctx.closePath();
+            }
+            
+            function drawTurtle14() 
+            {
+                ctx.beginPath();
+                ctx.arc(x14,y14,turtleBodyRadius,0,Math.PI*2);
+                ctx.fillStyle = "#006400";
+                ctx.fill();
+                ctx.closePath();
+                ctx.beginPath();
+                ctx.arc(x14,y14 + 20,turtleHeadRadius,0,Math.PI*2);
+                ctx.fillStyle = "#78AB46";
+                ctx.fill();
+                ctx.closePath();
+            }
+            
+            function drawTurtle15() 
+            {
+                ctx.beginPath();
+                ctx.arc(x15,y15,turtleBodyRadius,0,Math.PI*2);
+                ctx.fillStyle = "#006400";
+                ctx.fill();
+                ctx.closePath();
+                ctx.beginPath();
+                ctx.arc(x15,y15 - 20,turtleHeadRadius,0,Math.PI*2);
+                ctx.fillStyle = "#78AB46";
+                ctx.fill();
+                ctx.closePath();
+            }
+            
+            function drawTurtle16() 
+            {
+                ctx.beginPath();
+                ctx.arc(x16,y16,turtleBodyRadius,0,Math.PI*2);
+                ctx.fillStyle = "#006400";
+                ctx.fill();
+                ctx.closePath();
+                ctx.beginPath();
+                ctx.arc(x16 + 20,y16,turtleHeadRadius,0,Math.PI*2);
+                ctx.fillStyle = "#78AB46";
+                ctx.fill();
+                ctx.closePath();
+            }
+            
+            function drawTurtle17() 
+            {
+                ctx.beginPath();
+                ctx.arc(x17,y17,turtleBodyRadius,0,Math.PI*2);
+                ctx.fillStyle = "#006400";
+                ctx.fill();
+                ctx.closePath();
+                ctx.beginPath();
+                ctx.arc(x17 - 20,y17,turtleHeadRadius,0,Math.PI*2);
+                ctx.fillStyle = "#78AB46";
+                ctx.fill();
+                ctx.closePath();
+            }
+            
+            function drawTurtle18() 
+            {
+                ctx.beginPath();
+                ctx.arc(x18,y18,turtleBodyRadius,0,Math.PI*2);
+                ctx.fillStyle = "#006400";
+                ctx.fill();
+                ctx.closePath();
+                ctx.beginPath();
+                ctx.arc(x18,y18 + 20,turtleHeadRadius,0,Math.PI*2);
+                ctx.fillStyle = "#78AB46";
+                ctx.fill();
+                ctx.closePath();
+            }
+            
+            function drawTurtle19() 
+            {
+                ctx.beginPath();
+                ctx.arc(x19,y19,turtleBodyRadius,0,Math.PI*2);
+                ctx.fillStyle = "#006400";
+                ctx.fill();
+                ctx.closePath();
+                ctx.beginPath();
+                ctx.arc(x19,y19 - 20,turtleHeadRadius,0,Math.PI*2);
+                ctx.fillStyle = "#78AB46";
+                ctx.fill();
+                ctx.closePath();
+            }
+            
+            function drawTurtle20() 
+            {
+                ctx.beginPath();
+                ctx.arc(x20,y20,turtleBodyRadius,0,Math.PI*2);
+                ctx.fillStyle = "#006400";
+                ctx.fill();
+                ctx.closePath();
+                ctx.beginPath();
+                ctx.arc(x20 + 20,y20,turtleHeadRadius,0,Math.PI*2);
+                ctx.fillStyle = "#78AB46";
+                ctx.fill();
+                ctx.closePath();
+            }
+            
+            function drawTurtle21() 
+            {
+                ctx.beginPath();
+                ctx.arc(x21,y21,turtleBodyRadius,0,Math.PI*2);
+                ctx.fillStyle = "#006400";
+                ctx.fill();
+                ctx.closePath();
+                ctx.beginPath();
+                ctx.arc(x21 - 20,y21,turtleHeadRadius,0,Math.PI*2);
+                ctx.fillStyle = "#78AB46";
+                ctx.fill();
+                ctx.closePath();
+            }
+            
+            function drawTurtle22() 
+            {
+                ctx.beginPath();
+                ctx.arc(x22,y22,turtleBodyRadius,0,Math.PI*2);
+                ctx.fillStyle = "#006400";
+                ctx.fill();
+                ctx.closePath();
+                ctx.beginPath();
+                ctx.arc(x22,y22 + 20,turtleHeadRadius,0,Math.PI*2);
+                ctx.fillStyle = "#78AB46";
+                ctx.fill();
+                ctx.closePath();
+            }
+            
+            function drawTurtle23() 
+            {
+                ctx.beginPath();
+                ctx.arc(x23,y23,turtleBodyRadius,0,Math.PI*2);
+                ctx.fillStyle = "#006400";
+                ctx.fill();
+                ctx.closePath();
+                ctx.beginPath();
+                ctx.arc(x23,y23 - 20,turtleHeadRadius,0,Math.PI*2);
+                ctx.fillStyle = "#78AB46";
+                ctx.fill();
+                ctx.closePath();
+            }
+            
+            function drawTurtle24() 
+            {
+                ctx.beginPath();
+                ctx.arc(x24,y24,turtleBodyRadius,0,Math.PI*2);
+                ctx.fillStyle = "#006400";
+                ctx.fill();
+                ctx.closePath();
+                ctx.beginPath();
+                ctx.arc(x24 + 20,y24,turtleHeadRadius,0,Math.PI*2);
+                ctx.fillStyle = "#78AB46";
+                ctx.fill();
+                ctx.closePath();
+            }
+            
+            function drawTurtle25() 
+            {
+                ctx.beginPath();
+                ctx.arc(x25,y25,turtleBodyRadius,0,Math.PI*2);
+                ctx.fillStyle = "#006400";
+                ctx.fill();
+                ctx.closePath();
+                ctx.beginPath();
+                ctx.arc(x25 - 20,y25,turtleHeadRadius,0,Math.PI*2);
+                ctx.fillStyle = "#78AB46";
+                ctx.fill();
+                ctx.closePath();
+            }
+            
+            function drawTurtle26() 
+            {
+                ctx.beginPath();
+                ctx.arc(x26,y26,turtleBodyRadius,0,Math.PI*2);
+                ctx.fillStyle = "#006400";
+                ctx.fill();
+                ctx.closePath();
+                ctx.beginPath();
+                ctx.arc(x26,y26 + 20,turtleHeadRadius,0,Math.PI*2);
+                ctx.fillStyle = "#78AB46";
+                ctx.fill();
+                ctx.closePath();
+            }
+            
+            function drawTurtle27() 
+            {
+                ctx.beginPath();
+                ctx.arc(x27,y27,turtleBodyRadius,0,Math.PI*2);
+                ctx.fillStyle = "#006400";
+                ctx.fill();
+                ctx.closePath();
+                ctx.beginPath();
+                ctx.arc(x27 + 20,y27,turtleHeadRadius,0,Math.PI*2);
+                ctx.fillStyle = "#78AB46";
+                ctx.fill();
+                ctx.closePath();
+            }
+            
+            function drawTurtle28() 
+            {
+                ctx.beginPath();
+                ctx.arc(x28,y28,turtleBodyRadius,0,Math.PI*2);
+                ctx.fillStyle = "#006400";
+                ctx.fill();
+                ctx.closePath();
+                ctx.beginPath();
+                ctx.arc(x28 - 20,y28,turtleHeadRadius,0,Math.PI*2);
+                ctx.fillStyle = "#78AB46";
+                ctx.fill();
+                ctx.closePath();
+            }
+            
+            function drawTurtle29() 
+            {
+                ctx.beginPath();
+                ctx.arc(x29,y29,turtleBodyRadius,0,Math.PI*2);
+                ctx.fillStyle = "#006400";
+                ctx.fill();
+                ctx.closePath();
+                ctx.beginPath();
+                ctx.arc(x29,y29 + 20,turtleHeadRadius,0,Math.PI*2);
+                ctx.fillStyle = "#78AB46";
+                ctx.fill();
+                ctx.closePath();
+            }
+            
+            var cageWidth = 200;
+            var cageHeight = 200;
+            var cageX = (canvas.width - cageWidth) / 2;
+            var cageY = (canvas.height - cageHeight) / 2;
+            
+           
+            
+            function drawCage() 
+            {
+                ctx.beginPath();
+                ctx.rect(cageX,cageY,cageWidth,cageHeight);
+                ctx.strokeStyle = "#0095DD";
+                ctx.stroke();
+                ctx.closePath();
+            }
+            
+            var mousePressed = false;
+            
+            function draw() 
+            {
+                ctx.clearRect(0,0,canvas.width,canvas.height);                
+                drawTurtle();
+                drawTurtle1();
+                drawTurtle2();
+                drawTurtle3();
+                drawTurtle4();
+                drawTurtle5();
+                drawTurtle6();
+                drawTurtle7();
+                drawTurtle8();
+                drawTurtle9();
+                drawTurtle10();
+                drawTurtle11();
+                drawTurtle12();
+                drawTurtle13();
+                drawTurtle14();
+                drawTurtle15();
+                drawTurtle16();
+                drawTurtle17();
+                drawTurtle18();
+                drawTurtle19();
+                drawTurtle20();
+                drawTurtle21();
+                drawTurtle22();
+                drawTurtle23();
+                drawTurtle24();
+                drawTurtle25();
+                drawTurtle26();
+                drawTurtle27();
+                drawTurtle28();
+                drawTurtle29();
+                drawCage();
+                x += dx;
+                y += dy;
+                x1 += dx1;
+                y1 += dy1;
+                x2 += dx2;
+                y2 += dy2;
+                x3 += dx3;
+                y3 += dy3;
+                x4 += dx;
+                y4 += dy;
+                x5 += dx1;
+                y5 += dy1;
+                x6 += dx2;
+                y6 += dy2;
+                x7 += dx3;
+                y7 += dy3;
+                x8 += dx;
+                y8 += dy;
+                x9 += dx1;
+                y9 += dy1;
+                x10 += dx2;
+                y10 += dy2;
+                x11 += dx3;
+                y11 += dy3;
+                x12 += dx;
+                y12 += dy;
+                x13 += dx1;
+                y13 += dy1;
+                x14 += dx2;
+                y14 += dy2;
+                x15 += dx3;
+                y15 += dy3;
+                x16 += dx;
+                y16 += dy;
+                x17 += dx1;
+                y17 += dy1;
+                x18 += dx2;
+                y18 += dy2;
+                x19 += dx3;
+                y19 += dy3;
+                x20 += dx;
+                y20 += dy;
+                x21 += dx1;
+                y21 += dy1;
+                x22 += dx2;
+                y22 += dy2;
+                x23 += dx3;
+                y23 += dy3;
+                x24 += dx;
+                y24 += dy;
+                x25 += dx1;
+                y25 += dy1;
+                x26 += dx2;
+                y26 += dy2;
+                x27 += dx3;
+                y27 += dy3;
+                x28 += dx;
+                y28 += dy;
+                x29 += dx1;
+                y29 += dy1;
+                
+                // Left and Right boundaries, respectively
+                if (x + dx < turtleBodyRadius || x + dx > canvas.width - turtleBodyRadius) {
+                    dx = -dx;
+                } 
+                
+                // Top and Bottom boundaries, respectively
+                if (y + dy < turtleBodyRadius || y + dy > canvas.height - turtleBodyRadius) {
+                    dy = -dy;
+                }
+                
+                // Left and Right boundaries, respectively
+                if (x + dx < turtleHeadRadius || x + dx > canvas.width - turtleHeadRadius) {
+                    dx = -dx;
+                } 
+                
+                // Top and Bottom boundaries, respectively
+                if (y + dy < turtleHeadRadius || y + dy > canvas.height - turtleHeadRadius) {
+                    dy = -dy;
+                }
+                
+                if (x1 + dx1 < turtleBodyRadius || x1 + dx1 > canvas.width - turtleBodyRadius) {
+                    dx1 = -dx1;
+                } 
+                
+                // Top and Bottom boundaries, respectively
+                if (y1 + dy1 < turtleBodyRadius || y1 + dy1 > canvas.height - turtleBodyRadius) {
+                    dy1 = -dy1;
+                }
+                
+                // Left and Right boundaries, respectively
+                if (x1 + dx1 < turtleHeadRadius || x1 + dx1 > canvas.width - turtleHeadRadius) {
+                    dx1 = -dx1;
+                } 
+                
+                // Top and Bottom boundaries, respectively
+                if (y1 + dy1 < turtleHeadRadius || y1 + dy1 > canvas.height - turtleHeadRadius) {
+                    dy1 = -dy1;
+                }
+                
+                if (x2 + dx2 < turtleBodyRadius || x2 + dx2 > canvas.width - turtleBodyRadius) {
+                    dx2 = -dx2;
+                } 
+                
+                // Top and Bottom boundaries, respectively
+                if (y2 + dy2 < turtleBodyRadius || y2 + dy2 > canvas.height - turtleBodyRadius) {
+                    dy2 = -dy2;
+                }
+                
+                // Left and Right boundaries, respectively
+                if (x2 + dx2 < turtleHeadRadius || x2 + dx2 > canvas.width - turtleHeadRadius) {
+                    dx2 = -dx2;
+                } 
+                
+                // Top and Bottom boundaries, respectively
+                if (y2 + dy2 < turtleHeadRadius || y2 + dy2 > canvas.height - turtleHeadRadius) {
+                    dy2 = -dy2;
+                }
+                
+                if (x3 + dx3 < turtleBodyRadius || x3 + dx3 > canvas.width - turtleBodyRadius) {
+                    dx3 = -dx3;
+                } 
+                
+                // Top and Bottom boundaries, respectively
+                if (y3 + dy3 < turtleBodyRadius || y3 + dy3 > canvas.height - turtleBodyRadius) {
+                    dy3 = -dy3;
+                }
+                
+                // Left and Right boundaries, respectively
+                if (x3 + dx3 < turtleHeadRadius || x3 + dx3 > canvas.width - turtleHeadRadius) {
+                    dx3 = -dx3;
+                } 
+                
+                // Top and Bottom boundaries, respectively
+                if (y3 + dy3 < turtleHeadRadius || y3 + dy3 > canvas.height - turtleHeadRadius) {
+                    dy3 = -dy3;
+                }
+                
+                if (x4 + dx < turtleBodyRadius || x4 + dx > canvas.width - turtleBodyRadius) {
+                    dx = -dx;
+                } 
+                
+                // Top and Bottom boundaries, respectively
+                if (y4 + dy < turtleBodyRadius || y4 + dy > canvas.height - turtleBodyRadius) {
+                    dy = -dy;
+                }
+                
+                // Left and Right boundaries, respectively
+                if (x4 + dx < turtleHeadRadius || x4 + dx > canvas.width - turtleHeadRadius) {
+                    dx = -dx;
+                } 
+                
+                // Top and Bottom boundaries, respectively
+                if (y4 + dy < turtleHeadRadius || y4 + dy > canvas.height - turtleHeadRadius) {
+                    dy = -dy;
+                }
+                
+                if (x5 + dx1 < turtleBodyRadius || x5 + dx1 > canvas.width - turtleBodyRadius) {
+                    dx1 = -dx1;
+                } 
+                
+                // Top and Bottom boundaries, respectively
+                if (y5 + dy1 < turtleBodyRadius || y5 + dy1 > canvas.height - turtleBodyRadius) {
+                    dy1 = -dy1;
+                }
+                
+                // Left and Right boundaries, respectively
+                if (x5 + dx1 < turtleHeadRadius || x5 + dx1 > canvas.width - turtleHeadRadius) {
+                    dx1 = -dx1;
+                } 
+                
+                // Top and Bottom boundaries, respectively
+                if (y5 + dy1 < turtleHeadRadius || y5 + dy1 > canvas.height - turtleHeadRadius) {
+                    dy1 = -dy1;
+                }
+                
+                if (x6 + dx2 < turtleBodyRadius || x6 + dx2 > canvas.width - turtleBodyRadius) {
+                    dx2 = -dx2;
+                } 
+                
+                // Top and Bottom boundaries, respectively
+                if (y6 + dy2 < turtleBodyRadius || y6 + dy2 > canvas.height - turtleBodyRadius) {
+                    dy2 = -dy2;
+                }
+                
+                // Left and Right boundaries, respectively
+                if (x6 + dx2 < turtleHeadRadius || x6 + dx2 > canvas.width - turtleHeadRadius) {
+                    dx2 = -dx2;
+                } 
+                
+                // Top and Bottom boundaries, respectively
+                if (y6 + dy2 < turtleHeadRadius || y6 + dy2 > canvas.height - turtleHeadRadius) {
+                    dy2 = -dy2;
+                }
+                
+                if (x7 + dx3 < turtleBodyRadius || x7 + dx3 > canvas.width - turtleBodyRadius) {
+                    dx3 = -dx3;
+                } 
+                
+                // Top and Bottom boundaries, respectively
+                if (y7 + dy3 < turtleBodyRadius || y7 + dy3 > canvas.height - turtleBodyRadius) {
+                    dy3 = -dy3;
+                }
+                
+                // Left and Right boundaries, respectively
+                if (x7 + dx3 < turtleHeadRadius || x7 + dx3 > canvas.width - turtleHeadRadius) {
+                    dx3 = -dx3;
+                } 
+                
+                // Top and Bottom boundaries, respectively
+                if (y7 + dy3 < turtleHeadRadius || y7 + dy3 > canvas.height - turtleHeadRadius) {
+                    dy3 = -dy3;
+                }
+                
+                if (x8 + dx < turtleBodyRadius || x8 + dx > canvas.width - turtleBodyRadius) {
+                    dx = -dx;
+                } 
+                
+                // Top and Bottom boundaries, respectively
+                if (y8 + dy < turtleBodyRadius || y8 + dy > canvas.height - turtleBodyRadius) {
+                    dy = -dy;
+                }
+                
+                // Left and Right boundaries, respectively
+                if (x8 + dx < turtleHeadRadius || x8 + dx > canvas.width - turtleHeadRadius) {
+                    dx = -dx;
+                } 
+                
+                // Top and Bottom boundaries, respectively
+                if (y8 + dy < turtleHeadRadius || y8 + dy > canvas.height - turtleHeadRadius) {
+                    dy = -dy;
+                }
+                
+                if (x9 + dx1 < turtleBodyRadius || x9 + dx1 > canvas.width - turtleBodyRadius) {
+                    dx1 = -dx1;
+                } 
+                
+                // Top and Bottom boundaries, respectively
+                if (y9 + dy1 < turtleBodyRadius || y9 + dy1 > canvas.height - turtleBodyRadius) {
+                    dy1 = -dy1;
+                }
+                
+                // Left and Right boundaries, respectively
+                if (x9 + dx1 < turtleHeadRadius || x9 + dx1 > canvas.width - turtleHeadRadius) {
+                    dx1 = -dx1;
+                } 
+                
+                // Top and Bottom boundaries, respectively
+                if (y9 + dy1 < turtleHeadRadius || y9 + dy1 > canvas.height - turtleHeadRadius) {
+                    dy1 = -dy1;
+                }
+                
+                if (x10 + dx2 < turtleBodyRadius || x10 + dx2 > canvas.width - turtleBodyRadius) {
+                    dx2 = -dx2;
+                } 
+                
+                // Top and Bottom boundaries, respectively
+                if (y10 + dy2 < turtleBodyRadius || y10 + dy2 > canvas.height - turtleBodyRadius) {
+                    dy2 = -dy2;
+                }
+                
+                // Left and Right boundaries, respectively
+                if (x10 + dx2 < turtleHeadRadius || x10 + dx2 > canvas.width - turtleHeadRadius) {
+                    dx2 = -dx2;
+                } 
+                
+                // Top and Bottom boundaries, respectively
+                if (y10 + dy2 < turtleHeadRadius || y10 + dy2 > canvas.height - turtleHeadRadius) {
+                    dy2 = -dy2;
+                }
+                
+                if (x11 + dx3 < turtleBodyRadius || x11 + dx3 > canvas.width - turtleBodyRadius) {
+                    dx3 = -dx3;
+                } 
+                
+                // Top and Bottom boundaries, respectively
+                if (y11 + dy3 < turtleBodyRadius || y11 + dy3 > canvas.height - turtleBodyRadius) {
+                    dy3 = -dy3;
+                }
+                
+                // Left and Right boundaries, respectively
+                if (x11 + dx3 < turtleHeadRadius || x11 + dx3 > canvas.width - turtleHeadRadius) {
+                    dx3 = -dx3;
+                } 
+                
+                // Top and Bottom boundaries, respectively
+                if (y11 + dy3 < turtleHeadRadius || y11 + dy3 > canvas.height - turtleHeadRadius) {
+                    dy3 = -dy3;
+                }
+                
+                if (x12 + dx < turtleBodyRadius || x12 + dx > canvas.width - turtleBodyRadius) {
+                    dx = -dx;
+                } 
+                
+                // Top and Bottom boundaries, respectively
+                if (y12 + dy < turtleBodyRadius || y12 + dy > canvas.height - turtleBodyRadius) {
+                    dy = -dy;
+                }
+                
+                // Left and Right boundaries, respectively
+                if (x12 + dx < turtleHeadRadius || x12 + dx > canvas.width - turtleHeadRadius) {
+                    dx = -dx;
+                } 
+                
+                // Top and Bottom boundaries, respectively
+                if (y12 + dy < turtleHeadRadius || y12 + dy > canvas.height - turtleHeadRadius) {
+                    dy = -dy;
+                }
+                
+                if (x13 + dx1 < turtleBodyRadius || x13 + dx1 > canvas.width - turtleBodyRadius) {
+                    dx1 = -dx1;
+                } 
+                
+                // Top and Bottom boundaries, respectively
+                if (y13 + dy1 < turtleBodyRadius || y13 + dy1 > canvas.height - turtleBodyRadius) {
+                    dy1 = -dy1;
+                }
+                
+                // Left and Right boundaries, respectively
+                if (x13 + dx1 < turtleHeadRadius || x13 + dx1 > canvas.width - turtleHeadRadius) {
+                    dx1 = -dx1;
+                } 
+                
+                // Top and Bottom boundaries, respectively
+                if (y13 + dy1 < turtleHeadRadius || y13 + dy1 > canvas.height - turtleHeadRadius) {
+                    dy1 = -dy1;
+                }
+                
+                if (x14 + dx2 < turtleBodyRadius || x14 + dx2 > canvas.width - turtleBodyRadius) {
+                    dx2 = -dx2;
+                } 
+                
+                // Top and Bottom boundaries, respectively
+                if (y14 + dy2 < turtleBodyRadius || y14 + dy2 > canvas.height - turtleBodyRadius) {
+                    dy2 = -dy2;
+                }
+                
+                // Left and Right boundaries, respectively
+                if (x14 + dx2 < turtleHeadRadius || x14 + dx2 > canvas.width - turtleHeadRadius) {
+                    dx2 = -dx2;
+                } 
+                
+                // Top and Bottom boundaries, respectively
+                if (y14 + dy2 < turtleHeadRadius || y14 + dy2 > canvas.height - turtleHeadRadius) {
+                    dy2 = -dy2;
+                }
+                
+                if (x15 + dx3 < turtleBodyRadius || x15 + dx3 > canvas.width - turtleBodyRadius) {
+                    dx3 = -dx3;
+                } 
+                
+                // Top and Bottom boundaries, respectively
+                if (y15 + dy3 < turtleBodyRadius || y15 + dy3 > canvas.height - turtleBodyRadius) {
+                    dy3 = -dy3;
+                }
+                
+                // Left and Right boundaries, respectively
+                if (x15 + dx3 < turtleHeadRadius || x15 + dx3 > canvas.width - turtleHeadRadius) {
+                    dx3 = -dx3;
+                } 
+                
+                // Top and Bottom boundaries, respectively
+                if (y15 + dy3 < turtleHeadRadius || y15 + dy3 > canvas.height - turtleHeadRadius) {
+                    dy3 = -dy3;
+                }
+                
+                if (x16 + dx < turtleBodyRadius || x16 + dx > canvas.width - turtleBodyRadius) {
+                    dx = -dx;
+                } 
+                
+                // Top and Bottom boundaries, respectively
+                if (y16 + dy < turtleBodyRadius || y16 + dy > canvas.height - turtleBodyRadius) {
+                    dy = -dy;
+                }
+                
+                // Left and Right boundaries, respectively
+                if (x16 + dx < turtleHeadRadius || x16 + dx > canvas.width - turtleHeadRadius) {
+                    dx = -dx;
+                } 
+                
+                // Top and Bottom boundaries, respectively
+                if (y16 + dy < turtleHeadRadius || y16 + dy > canvas.height - turtleHeadRadius) {
+                    dy = -dy;
+                }
+                
+                if (x17 + dx1 < turtleBodyRadius || x17 + dx1 > canvas.width - turtleBodyRadius) {
+                    dx1 = -dx1;
+                } 
+                
+                // Top and Bottom boundaries, respectively
+                if (y17 + dy1 < turtleBodyRadius || y17 + dy1 > canvas.height - turtleBodyRadius) {
+                    dy1 = -dy1;
+                }
+                
+                // Left and Right boundaries, respectively
+                if (x17 + dx1 < turtleHeadRadius || x17 + dx1 > canvas.width - turtleHeadRadius) {
+                    dx1 = -dx1;
+                } 
+                
+                // Top and Bottom boundaries, respectively
+                if (y17 + dy1 < turtleHeadRadius || y17 + dy1 > canvas.height - turtleHeadRadius) {
+                    dy1 = -dy1;
+                }
+                
+                if (x18 + dx2 < turtleBodyRadius || x18 + dx2 > canvas.width - turtleBodyRadius) {
+                    dx2 = -dx2;
+                } 
+                
+                // Top and Bottom boundaries, respectively
+                if (y18 + dy2 < turtleBodyRadius || y18 + dy2 > canvas.height - turtleBodyRadius) {
+                    dy2 = -dy2;
+                }
+                
+                // Left and Right boundaries, respectively
+                if (x18 + dx2 < turtleHeadRadius || x18 + dx2 > canvas.width - turtleHeadRadius) {
+                    dx2 = -dx2;
+                } 
+                
+                // Top and Bottom boundaries, respectively
+                if (y18 + dy2 < turtleHeadRadius || y18 + dy2 > canvas.height - turtleHeadRadius) {
+                    dy2 = -dy2;
+                }
+                
+                if (x19 + dx3 < turtleBodyRadius || x19 + dx3 > canvas.width - turtleBodyRadius) {
+                    dx3 = -dx3;
+                } 
+                
+                // Top and Bottom boundaries, respectively
+                if (y19 + dy3 < turtleBodyRadius || y19 + dy3 > canvas.height - turtleBodyRadius) {
+                    dy3 = -dy3;
+                }
+                
+                // Left and Right boundaries, respectively
+                if (x19 + dx3 < turtleHeadRadius || x19 + dx3 > canvas.width - turtleHeadRadius) {
+                    dx3 = -dx3;
+                } 
+                
+                // Top and Bottom boundaries, respectively
+                if (y19 + dy3 < turtleHeadRadius || y19 + dy3 > canvas.height - turtleHeadRadius) {
+                    dy3 = -dy3;
+                }
+                
+                // Left and Right boundaries, respectively
+                if (x20 + dx < turtleBodyRadius || x20 + dx > canvas.width - turtleBodyRadius) {
+                    dx = -dx;
+                } 
+                
+                // Top and Bottom boundaries, respectively
+                if (y20 + dy < turtleBodyRadius || y20 + dy > canvas.height - turtleBodyRadius) {
+                    dy = -dy;
+                }
+                
+                // Left and Right boundaries, respectively
+                if (x20 + dx < turtleHeadRadius || x20 + dx > canvas.width - turtleHeadRadius) {
+                    dx = -dx;
+                } 
+                
+                // Top and Bottom boundaries, respectively
+                if (y20 + dy < turtleHeadRadius || y20 + dy > canvas.height - turtleHeadRadius) {
+                    dy = -dy;
+                }
+                
+                if (x21 + dx1 < turtleBodyRadius || x21 + dx1 > canvas.width - turtleBodyRadius) {
+                    dx1 = -dx1;
+                } 
+                
+                // Top and Bottom boundaries, respectively
+                if (y21 + dy1 < turtleBodyRadius || y21 + dy1 > canvas.height - turtleBodyRadius) {
+                    dy1 = -dy1;
+                }
+                
+                // Left and Right boundaries, respectively
+                if (x21 + dx1 < turtleHeadRadius || x21 + dx1 > canvas.width - turtleHeadRadius) {
+                    dx1 = -dx1;
+                } 
+                
+                // Top and Bottom boundaries, respectively
+                if (y21 + dy1 < turtleHeadRadius || y21 + dy1 > canvas.height - turtleHeadRadius) {
+                    dy1 = -dy1;
+                }
+                
+                if (x22 + dx2 < turtleBodyRadius || x22 + dx2 > canvas.width - turtleBodyRadius) {
+                    dx2 = -dx2;
+                } 
+                
+                // Top and Bottom boundaries, respectively
+                if (y22 + dy2 < turtleBodyRadius || y22 + dy2 > canvas.height - turtleBodyRadius) {
+                    dy2 = -dy2;
+                }
+                
+                // Left and Right boundaries, respectively
+                if (x22 + dx2 < turtleHeadRadius || x22 + dx2 > canvas.width - turtleHeadRadius) {
+                    dx2 = -dx2;
+                } 
+                
+                // Top and Bottom boundaries, respectively
+                if (y22 + dy2 < turtleHeadRadius || y22 + dy2 > canvas.height - turtleHeadRadius) {
+                    dy2 = -dy2;
+                }
+                
+                if (x23 + dx3 < turtleBodyRadius || x23 + dx3 > canvas.width - turtleBodyRadius) {
+                    dx3 = -dx3;
+                } 
+                
+                // Top and Bottom boundaries, respectively
+                if (y23 + dy3 < turtleBodyRadius || y23 + dy3 > canvas.height - turtleBodyRadius) {
+                    dy3 = -dy3;
+                }
+                
+                // Left and Right boundaries, respectively
+                if (x23 + dx3 < turtleHeadRadius || x23 + dx3 > canvas.width - turtleHeadRadius) {
+                    dx3 = -dx3;
+                } 
+                
+                // Top and Bottom boundaries, respectively
+                if (y23 + dy3 < turtleHeadRadius || y23 + dy3 > canvas.height - turtleHeadRadius) {
+                    dy3 = -dy3;
+                }
+                
+                if (x24 + dx < turtleBodyRadius || x24 + dx > canvas.width - turtleBodyRadius) {
+                    dx = -dx;
+                } 
+                
+                // Top and Bottom boundaries, respectively
+                if (y24 + dy < turtleBodyRadius || y24 + dy > canvas.height - turtleBodyRadius) {
+                    dy = -dy;
+                }
+                
+                // Left and Right boundaries, respectively
+                if (x24 + dx < turtleHeadRadius || x24 + dx > canvas.width - turtleHeadRadius) {
+                    dx = -dx;
+                } 
+                
+                // Top and Bottom boundaries, respectively
+                if (y24 + dy < turtleHeadRadius || y24 + dy > canvas.height - turtleHeadRadius) {
+                    dy = -dy;
+                }
+                
+                if (x25 + dx1 < turtleBodyRadius || x25 + dx1 > canvas.width - turtleBodyRadius) {
+                    dx1 = -dx1;
+                } 
+                
+                // Top and Bottom boundaries, respectively
+                if (y25 + dy1 < turtleBodyRadius || y25 + dy1 > canvas.height - turtleBodyRadius) {
+                    dy1 = -dy1;
+                }
+                
+                // Left and Right boundaries, respectively
+                if (x25 + dx1 < turtleHeadRadius || x25 + dx1 > canvas.width - turtleHeadRadius) {
+                    dx1 = -dx1;
+                } 
+                
+                // Top and Bottom boundaries, respectively
+                if (y25 + dy1 < turtleHeadRadius || y25 + dy1 > canvas.height - turtleHeadRadius) {
+                    dy1 = -dy1;
+                }
+                
+                if (x26 + dx2 < turtleBodyRadius || x26 + dx2 > canvas.width - turtleBodyRadius) {
+                    dx2 = -dx2;
+                } 
+                
+                // Top and Bottom boundaries, respectively
+                if (y26 + dy2 < turtleBodyRadius || y26 + dy2 > canvas.height - turtleBodyRadius) {
+                    dy2 = -dy2;
+                }
+                
+                // Left and Right boundaries, respectively
+                if (x26 + dx2 < turtleHeadRadius || x26 + dx2 > canvas.width - turtleHeadRadius) {
+                    dx2 = -dx2;
+                } 
+                
+                // Top and Bottom boundaries, respectively
+                if (y26 + dy2 < turtleHeadRadius || y26 + dy2 > canvas.height - turtleHeadRadius) {
+                    dy2 = -dy2;
+                }
+                
+                if (x27 + dx3 < turtleBodyRadius || x27 + dx3 > canvas.width - turtleBodyRadius) {
+                    dx3 = -dx3;
+                } 
+                
+                // Top and Bottom boundaries, respectively
+                if (y27 + dy3 < turtleBodyRadius || y27 + dy3 > canvas.height - turtleBodyRadius) {
+                    dy3 = -dy3;
+                }
+                
+                // Left and Right boundaries, respectively
+                if (x27 + dx3 < turtleHeadRadius || x27 + dx3 > canvas.width - turtleHeadRadius) {
+                    dx3 = -dx3;
+                } 
+                
+                // Top and Bottom boundaries, respectively
+                if (y27 + dy3 < turtleHeadRadius || y27 + dy3 > canvas.height - turtleHeadRadius) {
+                    dy3 = -dy3;
+                }
+                
+                if (x28 + dx < turtleBodyRadius || x28 + dx > canvas.width - turtleBodyRadius) {
+                    dx = -dx;
+                } 
+                
+                // Top and Bottom boundaries, respectively
+                if (y28 + dy < turtleBodyRadius || y28 + dy > canvas.height - turtleBodyRadius) {
+                    dy = -dy;
+                }
+                
+                // Left and Right boundaries, respectively
+                if (x28 + dx < turtleHeadRadius || x28 + dx > canvas.width - turtleHeadRadius) {
+                    dx = -dx;
+                } 
+                
+                // Top and Bottom boundaries, respectively
+                if (y28 + dy < turtleHeadRadius || y28 + dy > canvas.height - turtleHeadRadius) {
+                    dy = -dy;
+                }
+                
+                if (x29 + dx1 < turtleBodyRadius || x29 + dx1 > canvas.width - turtleBodyRadius) {
+                    dx1 = -dx1;
+                } 
+                
+                // Top and Bottom boundaries, respectively
+                if (y29 + dy1 < turtleBodyRadius || y29 + dy1 > canvas.height - turtleBodyRadius) {
+                    dy1 = -dy1;
+                }
+                
+                // Left and Right boundaries, respectively
+                if (x29 + dx1 < turtleHeadRadius || x29 + dx1 > canvas.width - turtleHeadRadius) {
+                    dx1 = -dx1;
+                } 
+                
+                // Top and Bottom boundaries, respectively
+                if (y29 + dy1 < turtleHeadRadius || y29 + dy1 > canvas.height - turtleHeadRadius) {
+                    dy1 = -dy1;
+                }                
+                
+                if (mousePressed) {
+                    var trueAnswer = 0;
+                    var answer = prompt("How many turtles are in the box?", "");
+                    
+                    if (x > cageX && x < cageX + cageWidth && y > cageY && y < cageY + cageHeight) {                        
+                        trueAnswer++;
+                    }
+                    
+                    if (x1 > cageX && x1 < cageX + cageWidth && y1 > cageY && y1 < cageY + cageHeight) {                        
+                        trueAnswer++;
+                    }
+                    
+                    if (x2 > cageX && x2 < cageX + cageWidth && y2 > cageY && y2 < cageY + cageHeight) {                        
+                        trueAnswer++;
+                    }
+                    
+                    if (x3 > cageX && x3 < cageX + cageWidth && y3 > cageY && y3 < cageY + cageHeight) {                        
+                        trueAnswer++;
+                    }
+                    
+                    if (x4 > cageX && x4 < cageX + cageWidth && y4 > cageY && y4 < cageY + cageHeight) {                        
+                        trueAnswer++;
+                    }
+                    
+                    if (x5 > cageX && x5 < cageX + cageWidth && y5 > cageY && y5 < cageY + cageHeight) {                        
+                        trueAnswer++;
+                    }
+                    
+                    if (x6 > cageX && x6 < cageX + cageWidth && y6 > cageY && y6 < cageY + cageHeight) {                        
+                        trueAnswer++;
+                    }
+                    
+                    if (x7 > cageX && x7 < cageX + cageWidth && y7 > cageY && y7 < cageY + cageHeight) {                        
+                        trueAnswer++;
+                    }
+                    
+                    if (x8 > cageX && x8 < cageX + cageWidth && y8 > cageY && y8 < cageY + cageHeight) {                        
+                        trueAnswer++;
+                    }
+                    
+                    if (x9 > cageX && x9 < cageX + cageWidth && y9 > cageY && y9 < cageY + cageHeight) {                        
+                        trueAnswer++;
+                    }
+                    
+                    if (x10 > cageX && x10 < cageX + cageWidth && y10 > cageY && y10 < cageY + cageHeight) {                        
+                        trueAnswer++;
+                    }
+                    
+                    if (x11 > cageX && x11 < cageX + cageWidth && y11 > cageY && y11 < cageY + cageHeight) {                        
+                        trueAnswer++;
+                    }
+                    
+                    if (x12 > cageX && x12 < cageX + cageWidth && y12 > cageY && y12 < cageY + cageHeight) {                        
+                        trueAnswer++;
+                    }
+                    
+                    if (x13 > cageX && x13 < cageX + cageWidth && y13 > cageY && y13 < cageY + cageHeight) {                        
+                        trueAnswer++;
+                    }
+                    
+                    if (x14 > cageX && x14 < cageX + cageWidth && y14 > cageY && y14 < cageY + cageHeight) {                        
+                        trueAnswer++;
+                    }
+                    
+                    if (x15 > cageX && x15 < cageX + cageWidth && y15 > cageY && y15 < cageY + cageHeight) {                        
+                        trueAnswer++;
+                    }
+                    
+                    if (x16 > cageX && x16 < cageX + cageWidth && y16 > cageY && y16 < cageY + cageHeight) {                        
+                        trueAnswer++;
+                    }
+                    
+                    if (x17 > cageX && x17 < cageX + cageWidth && y17 > cageY && y17 < cageY + cageHeight) {                        
+                        trueAnswer++;
+                    }
+                    
+                    if (x18 > cageX && x18 < cageX + cageWidth && y18 > cageY && y18 < cageY + cageHeight) {                        
+                        trueAnswer++;
+                    }
+                    
+                    if (x19 > cageX && x19 < cageX + cageWidth && y19 > cageY && y19 < cageY + cageHeight) {                        
+                        trueAnswer++;
+                    }
+                    
+                    if (x20 > cageX && x20 < cageX + cageWidth && y20 > cageY && y20 < cageY + cageHeight) {                        
+                        trueAnswer++;
+                    }
+                    
+                    if (x21 > cageX && x21 < cageX + cageWidth && y21 > cageY && y21 < cageY + cageHeight) {                        
+                        trueAnswer++;
+                    }
+                    
+                    if (x22 > cageX && x22 < cageX + cageWidth && y22 > cageY && y22 < cageY + cageHeight) {                        
+                        trueAnswer++;
+                    }
+                    
+                    if (x23 > cageX && x23 < cageX + cageWidth && y23 > cageY && y23 < cageY + cageHeight) {                        
+                        trueAnswer++;
+                    }
+                    
+                    if (x24 > cageX && x24 < cageX + cageWidth && y24 > cageY && y24 < cageY + cageHeight) {                        
+                        trueAnswer++;
+                    }
+                    
+                    if (x25 > cageX && x25 < cageX + cageWidth && y25 > cageY && y25 < cageY + cageHeight) {                        
+                        trueAnswer++;
+                    }
+                    
+                    if (x26 > cageX && x26 < cageX + cageWidth && y26 > cageY && y26 < cageY + cageHeight) {                        
+                        trueAnswer++;
+                    }
+                    
+                    if (x27 > cageX && x27 < cageX + cageWidth && y27 > cageY && y27 < cageY + cageHeight) {                        
+                        trueAnswer++;
+                    }
+                    
+                    if (x28 > cageX && x28 < cageX + cageWidth && y28 > cageY && y28 < cageY + cageHeight) {                        
+                        trueAnswer++;
+                    }
+                    
+                    if (x29 > cageX && x29 < cageX + cageWidth && y29 > cageY && y29 < cageY + cageHeight) {                        
+                        trueAnswer++;
+                    }
+                    
+                    if (answer == trueAnswer) {
+                        alert("Congratulations! You got the correct answer!");
+                        return false;
+                    }
+                    else {
+                        alert("Sorry! That is not the correct answer. Try again.");
+                        return false;
+                    }                   
+                }
+                
+                x += dx;
+                y += dy;
+                x1 += dx1;
+                y1 += dy1;
+                x2 += dx2;
+                y2 += dy2;
+                x3 += dx3;
+                y3 += dy3;
+                x4 += dx;
+                y4 += dy;
+                x5 += dx1;
+                y5 += dy1;
+                x6 += dx2;
+                y6 += dy2;
+                x7 += dx3;
+                y7 += dy3;
+                x8 += dx;
+                y8 += dy;
+                x9 += dx1;
+                y9 += dy1;
+                x10 += dx2;
+                y10 += dy2;
+                x11 += dx3;
+                y11 += dy3;
+                x12 += dx;
+                y12 += dy;
+                x13 += dx1;
+                y13 += dy1;
+                x14 += dx2;
+                y14 += dy2;
+                x15 += dx3;
+                y15 += dy3;
+                x16 += dx;
+                y16 += dy;
+                x17 += dx1;
+                y17 += dy1;
+                x18 += dx2;
+                y18 += dy2;
+                x19 += dx3;
+                y19 += dy3;
+                x20 += dx;
+                y20 += dy;
+                x21 += dx1;
+                y21 += dy1;
+                x22 += dx2;
+                y22 += dy2;
+                x23 += dx3;
+                y23 += dy3;
+                x24 += dx;
+                y24 += dy;
+                x25 += dx1;
+                y25 += dy1;
+                x26 += dx2;
+                y26 += dy2;
+                x27 += dx3;
+                y27 += dy3;
+                x28 += dx;
+                y28 += dy;
+                x29 += dx1;
+                y29 += dy1;                
+                requestAnimationFrame(draw); 
+            }
+            
+            document.addEventListener("mousemove",mouseMoveHandler,false);
+            document.addEventListener("keydown",keyDownHandler,false);
+            document.addEventListener("keyup",keyUpHandler,false);
+            
+            // Mouse functions
+            function mouseMoveHandler(e) {
+                var relativeX = e.clientX - (cageWidth);
+                var relativeY = e.clientY - (cageHeight / (4/3));
+                if (relativeX > 0 && relativeX < canvas.width && relativeY > 0 && relativeY < canvas.height) {
+                    cageX = relativeX - cageWidth / 2;
+                    cageY = relativeY - cageHeight / 2;
+                }
+            }
+            
+            // Keyboard functions
+            // When key is pressed 
+            function keyDownHandler(e) {
+                if (e.key == " " || e.key == "Spacebar") {
+                    mousePressed = true;
+                }                       
+            }
+            
+            // When key is released 
+            function keyUpHandler(e) {
+                if (e.key == " " || e.key == "Spacebar") {
+                    mousePressed = false;
+                }
+            }
+            draw();            
+        </script>
+        <h3>INSTRUCTIONS: Try to catch as many turtles as you can by putting them in the box! To catch them, press the Spacebar. Then, you will count how many you caught! After you answer, reload the page if you want to try again!</h3>
+        
+    </body>
+</html> 
